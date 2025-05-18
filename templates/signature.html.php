@@ -322,11 +322,11 @@
     url_font = <?php echo json_encode('/vendor/fonts/Caveat-Regular.ttf') ?>
     <?php endif; ?>
     </script>
-    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js" defer></script>
-    <script src="<?php echo $REVERSE_PROXY_URL; ?>/js/common.js?<?php echo ($COMMIT) ? $COMMIT : filemtime($ROOT."/public/js/common.js") ?>" defer></script>
-    <script>
-        Window['PDFLib'] = PDFLib;
+    <script type="module">
+        import * as PDFLib from "https://unpkg.com/pdf-lib/dist/pdf-lib.min.js";
+        window.PDFLib = PDFLib;
     </script>
+    <script src="<?php echo $REVERSE_PROXY_URL; ?>/js/common.js?<?php echo ($COMMIT) ? $COMMIT : filemtime($ROOT."/public/js/common.js") ?>"></script>
     <script src="<?php echo $REVERSE_PROXY_URL; ?>/js/signature.js?<?php echo ($COMMIT) ? $COMMIT : filemtime($ROOT."/public/js/signature.js") ?>"></script>
   </body>
 </html>
