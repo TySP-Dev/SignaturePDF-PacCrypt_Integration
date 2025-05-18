@@ -605,7 +605,10 @@ async function save(order) {
     cleanPDF(pdf);
 
     const newPDF = new Blob([await pdf.save()], {type: "application/pdf"});
-    await download(newPDF, filename+".pdf");
+    window.latestSignedPdfBlob = newPDF;
+    window.latestSignedPdfFilename = filename + ".pdf";
+    await download(newPDF, window.latestSignedPdfFilename);
+
 }
 
 function cleanPDF(pdf) {
@@ -773,7 +776,7 @@ function createEventsListener() {
         document.querySelector('#btn_liste_pdf').click();
     });
     document.querySelector('body').addEventListener('click', function(event) {
-        if(!event.originalTarget.classList.contains('offcanvas-header') && !event.originalTarget.classList.contains('offcanvas-body') && event.originalTarget.id != 'container-pages' && event.originalTarget.id != 'sidebarToolsLabel' && event.originalTarget.id != 'btn_container') {
+        if(!event.target.classList.contains('offcanvas-header') && !event.originalTarget.classList.contains('offcanvas-body') && event.originalTarget.id != 'container-pages' && event.originalTarget.id != 'sidebarToolsLabel' && event.originalTarget.id != 'btn_container') {
             return;
         }
         document.getElementById('btn_cancel_select').click();

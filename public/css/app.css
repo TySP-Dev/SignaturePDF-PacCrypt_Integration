@@ -12,6 +12,135 @@
     src: url(/vendor/fonts/Tajawal-Medium.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url(/vendor/fonts/PressStart2P-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#paccrypt_controls {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #28E060;
+  margin-bottom: 150px;
+  bottom: 3% !important;
+  position: absolute;
+  max-width: 325px;
+}
+
+#paccrypt_controls_metadata {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #28E060;
+  margin-right: 10px;
+  max-width: 325px;
+  float: right !important;
+  margin-top: 178px;
+}
+
+.tooltip > .tooltip-inner {
+  font-family: 'Press Start 2P';
+  font-size: 0.55rem;
+  text-align: center;
+  color: #28E060;
+  background-color: #1e1e1e;
+  border: 1px solid #28E060;
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #28E060;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 75px;
+    width: auto;
+}
+
+.logo-text h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(.50em, 6vw, 1.50em);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: #28E060;
+    margin: 0;
+    text-align: left;
+}
+
+.paccrypt-box {
+  background-color: #1e1e1e;
+  border: 2px solid #4caf50;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: 'Press Start 2P', monospace;
+  color: #f8f9fa;
+}
+
+.paccrypt-box input {  
+    border: 1px solid #28E060;
+    border-radius: 6px;
+    background-color: #2c2f33;
+    color: #28E060;
+    text-align: left;
+    transition: 0.3s;
+    min-height: 50px;
+}
+
+.paccrypt-box input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #28E060;
+    background-color: #2c2f33;
+    border-color: unset;
+    border: 1px solid #28E060;
+}
+
+.paccrypt-box input::placeholder {
+  color: #bbb;
+  opacity: 1; 
+  font-size: .8em;
+}
+
+.paccrypt-box input:focus::placeholder {
+  color: #888;
+}
+
+.paccrypt-btn-share,
+.paccrypt-btn-enc {
+    padding-inline: 20px;
+    padding-block: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c2f33;
+    color: #28E060;
+    font-size: .8em;
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto;
+    min-width: 300px;
+    max-width: 300px;
+    height: 45px;
+    justify-self: center;
+}
+
+.paccrypt-btn-share:hover,
+.paccrypt-btn-enc:hover {
+    background-color: #28E060;
+    color: #121212;
+    box-shadow: 0 0 10px #28E060;
+}
+
+.paccrypt-btn-enc:focus,
+.paccrypt-btn-share:focus {
+    outline: none;
+    box-shadow: 0 0 10px #28E060;
+}
+
 #container-pages {
     overflow: auto;
 }

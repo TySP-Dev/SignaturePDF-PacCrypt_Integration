@@ -67,7 +67,27 @@
                     </div>
                     <div class="card-footer d-none small text-center p-1 border-primary bg-primary bg-opacity-25"><a id="btn_cancel_select_footer" type="button" aria-label="Close" style="text-decoration: none;" class="text-primary"><?php echo sprintf(_("%s Cancel selection"), '<i class="bi bi-x-lg"></i>'); ?></a></div>
                 </div>
-
+              <div id="paccrypt-wrapper">
+              <!-- PacCrypt Integration -->
+                <div id="paccrypt_controls" class="paccrypt-box mb-3 px-2">
+                  <div class="logo-container">
+                    <img src="/img/PacCrypt.png" alt="PacCrypt Logo" />
+                    <div class="logo-text">
+                      <h1>PACCRYPT</h1>
+                    </div>
+                  </div>
+                    <input type="password" class="form-control mb-2" id="paccrypt_enc_password" placeholder="Encryption Password">
+                    <input type="password" class="form-control mb-2" id="paccrypt_pickup_password" placeholder="Pickup Password" title="PacShare only" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                    <div class="d-grid gap-2">
+                      <button class="btn paccrypt-btn-enc" id="btn_download_encrypt" type="button">
+                        <i></i> Encrypt and Download
+                      </button>
+                      <button class="btn paccrypt-btn-share" id="btn_encrypt_pacshare" type="button">
+                        <i></i> Send with PacShare
+                      </button>
+                    </div>
+                </div>
+              </div>
                 <div class="position-absolute bottom-0 pb-2 ps-0 pe-4 w-100">
                     <form id="form_pdf" action="<?php echo $REVERSE_PROXY_URL; ?>/organize" method="post" enctype="multipart/form-data">
                         <input id="input_pdf" name="pdf[]" type="file" class="d-none" />

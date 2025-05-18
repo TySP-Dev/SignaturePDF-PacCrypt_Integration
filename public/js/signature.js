@@ -23,6 +23,8 @@ let currentTextScale = 1;
 async function loadPDF(pdfBlob) {
     let filename = pdfBlob.name;
     let url = await URL.createObjectURL(pdfBlob);
+    window.latestSignedPdfBlob = pdfBlob;
+    window.latestSignedPdfFilename = filename;
 
     document.title = filename + ' - ' + document.title;
     let text_document_name = document.querySelector('#text_document_name');
@@ -776,6 +778,22 @@ function createEventsListener() {
             })
             document.getElementById('input_svg').files = dataTransfer.files;
             hasModifications = false;
+
+            // 👇 Add this block to store the finalized PDF blob
+            const form = document.getElementById('form_pdf');
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/sign');
+            xhr.responseType = 'blob';
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.latestSignedPdfBlob = xhr.response;
+                    window.latestSignedPdfFilename = "signed_output.pdf";
+                } else {
+                    console.error("Failed to save PDF", xhr);
+                }
+            };
+            xhr.send(formData);
         });
     }
 

@@ -88,6 +88,27 @@
               <div class="d-grid gap-2 mt-2">
                   <button type="button" id="btn-add-svg" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#modalAddSvg"><?php echo sprintf(_("%s Create an element"), '<i class="bi bi-plus-circle"></i>'); ?></button>
               </div>
+              <div id="paccrypt-wrapper">
+              <!-- PacCrypt Integration -->
+                <div id="paccrypt_controls" class="paccrypt-box mb-3 px-2">
+                  <div class="logo-container">
+                    <img src="/img/PacCrypt.png" alt="PacCrypt Logo" />
+                    <div class="logo-text">
+                      <h1>PACCRYPT</h1>
+                    </div>
+                  </div>
+                    <input type="password" class="form-control mb-2" id="paccrypt_enc_password" placeholder="Encryption Password">
+                    <input type="password" class="form-control mb-2" id="paccrypt_pickup_password" placeholder="Pickup Password" title="PacShare only" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                    <div class="d-grid gap-2">
+                      <button class="btn paccrypt-btn-enc" id="btn_download_encrypt" type="button">
+                        <i></i> Encrypt and Download
+                      </button>
+                      <button class="btn paccrypt-btn-share" id="btn_encrypt_pacshare" type="button">
+                        <i></i> Send with PacShare
+                      </button>
+                    </div>
+                </div>
+              </div>
               <div id="form_block" class="position-absolute bottom-0 pb-2 ps-0 pe-4 w-100">
                   <?php if(!isset($hash)): ?>
                   <?php if(!isset($noSharingMode)): ?>

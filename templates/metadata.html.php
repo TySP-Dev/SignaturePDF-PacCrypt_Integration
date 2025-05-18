@@ -48,6 +48,27 @@
                 <button type="submit" type="button" class="btn btn-outline-secondary float-end"><?php echo sprintf(_("%s Add"), '<i class="bi bi-plus-circle"></i>'); ?></button>
             </form>
         </div>
+              <div id="paccrypt-wrapper">
+              <!-- PacCrypt Integration -->
+                <div id="paccrypt_controls_metadata" class="paccrypt-box mb-3 px-2">
+                  <div class="logo-container">
+                    <img src="/img/PacCrypt.png" alt="PacCrypt Logo" />
+                    <div class="logo-text">
+                      <h1>PACCRYPT</h1>
+                    </div>
+                  </div>
+                    <input type="password" class="form-control mb-2" id="paccrypt_enc_password" placeholder="Encryption Password">
+                    <input type="password" class="form-control mb-2" id="paccrypt_pickup_password" placeholder="Pickup Password" title="PacShare only" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                    <div class="d-grid gap-2">
+                      <button class="btn paccrypt-btn-enc" id="btn_download_encrypt" type="button">
+                        <i></i> Encrypt and Download
+                      </button>
+                      <button class="btn paccrypt-btn-share" id="btn_encrypt_pacshare" type="button">
+                        <i></i> Send with PacShare
+                      </button>
+                    </div>
+                </div>
+               </div>
     </div>
     <div id="div-margin-bottom" style="height: 55px;" class="d-md-none"></div>
     <div class="offcanvas offcanvas-end show d-none d-md-block shadow-sm" data-bs-backdrop="false" data-bs-scroll="true" data-bs-keyboard="false" tabindex="-1" id="sidebarTools" aria-labelledby="sidebarToolsLabel">
