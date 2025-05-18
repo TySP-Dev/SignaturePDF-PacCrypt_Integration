@@ -1,4 +1,12 @@
-const modalLoading = new bootstrap.Modal('#modalLoading')
+(async () => {
+  async function waitForPDFLib() {
+    while (!window.PDFLib || !window.PDFLib.PDFDocument) {
+      await new Promise(r => setTimeout(r, 50));
+    }
+  }
+  await waitForPDFLib();
+
+  const modalLoading = new bootstrap.Modal('#modalLoading')
 
 function cleanPDF(pdf) {
     let pagesRef = [];
@@ -499,6 +507,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnShare.dataset.bound = true;
   }
 });
+})();
 
 
 
