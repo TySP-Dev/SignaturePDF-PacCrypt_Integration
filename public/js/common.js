@@ -418,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formData.append("enc_password", password);
 
       try {
-        const response = await fetch("https://paccrypt.unnaturalll.dev/api/encrypt", {
+        const response = await fetch("http://paccrypt:5000/api/encrypt", {
           method: "POST",
           body: formData
         });
@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formData.append("pickup_password", pickup);
 
       try {
-        const res = await fetch("https://paccrypt.unnaturalll.dev/api/pacshare", {
+        const res = await fetch("http://paccrypt:5000/api/encrypt", {
           method: "POST",
           body: formData,
         });
