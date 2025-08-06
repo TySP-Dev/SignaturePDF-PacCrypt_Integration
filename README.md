@@ -8,8 +8,9 @@ Free web software for signing (alone or with others), organizing (merge, sort, r
 ## Notes about the PacCrypt Integration:
 > This is a modified version of SignaturePDF that includes integration with PacCrypt, an open source, file/text encryption/decryption and secure file sharing platform.
 
+#### Work on this project has been halted while PacCrypt goes under major backend changes that will break the current API integration.
+
 *This is a low priority project.*
-**Work on this project has been halted while PacCrypt goes under major backend changes that will break the current API integration.**
 
 ## Instances
 List of instances where you can use this software:
