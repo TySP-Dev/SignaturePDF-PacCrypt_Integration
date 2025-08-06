@@ -4,7 +4,11 @@
 ![Logo signature PDF](https://github.com/24eme/signaturepdf/blob/master/public/logo.svg)
 
 Free web software for signing (alone or with others), organizing (merge, sort, rotate, delete, extract pages, ...), editing metadatas or compressing PDFs.
-This is a modified version of SignaturePDF that includes integration with PacCrypt, an open source, file/text encryption/decryption and secure file sharing platform.
+
+## Notes about the PacCrypt Integration:
+> This is a modified version of SignaturePDF that includes integration with PacCrypt, an open source, file/text encryption/decryption and secure file sharing platform.
+*This is a low priority project.*
+**Work on this project has been halted while PacCrypt goes under major backend changes that will break the current API integration.**
 
 ## Instances
 List of instances where you can use this software:
